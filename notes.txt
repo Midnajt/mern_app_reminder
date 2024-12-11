@@ -1,0 +1,18 @@
+templatka: https://github.com/john-smilga/mern-jobify-v2
+🛠🛠🛠🛠🛠🛠🛠🛠🛠🛠🛠 MERN APP reminder 🛠🛠🛠🛠🛠🛠🛠🛠🛠🛠🛠
+
+⚜ Tworzenie projektu
+npm create vite@latest client -- --template react 
+
+favicon.io
+
+◽tanstack/react-query - Zarządza stanem danych asynchronicznych i ich buforowaniem w aplikacjach React.
+◽tanstack/react-query-devtools - Narzędzie deweloperskie do debugowania i monitorowania stanu oraz zapytań zarządzanych przez React Query.
+◽axios - Biblioteka do wykonywania zapytań HTTP z obietnicami w JavaScript.
+◽dayjs - Lekka biblioteka do manipulacji i formatowania dat oraz czasu.
+◽react-icons - Zbiór ikon dostępnych jako komponenty React z różnych bibliotek.
+◽react-router-dom - Biblioteka do obsługi routingu w aplikacjach React z możliwością zarządzania nawigacją między stronami.
+◽react-toastify - Umożliwia łatwe wyświetlanie powiadomień toast w aplikacjach React.
+◽recharts - Biblioteka do tworzenia wykresów i wizualizacji danych w React.
+◽styled-components - Umożliwia tworzenie komponentów React z wbudowanym stylem CSS w sposób deklaratywny.
+
