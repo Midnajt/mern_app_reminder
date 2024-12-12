@@ -1,7 +1,7 @@
 templatka: https://github.com/john-smilga/mern-jobify-v2
 🛠🛠🛠🛠🛠🛠🛠🛠🛠🛠🛠 MERN APP reminder 🛠🛠🛠🛠🛠🛠🛠🛠🛠🛠🛠
 
-⚜ Tworzenie projektu
+⚜ SETUP
 npm create vite@latest client -- --template react 
 
 favicon.io
@@ -16,3 +16,30 @@ favicon.io
 ◽recharts - Biblioteka do tworzenia wykresów i wizualizacji danych w React.
 ◽styled-components - Umożliwia tworzenie komponentów React z wbudowanym stylem CSS w sposób deklaratywny.
 
+⚜ REACT ROUTER
+    ◽ npm i react-router-dom
+    ◽ dostarcza loaders oraz actions
+    ◽ dzięki niemu jest potrzebnych mniej global state'ów
+    ◽ strony są niezależnymi bytami
+    
+⚜ 
+    ◽
+    ◽
+⚜ 
+    ◽
+    ◽
+⚜ 
+    ◽
+    ◽
+⚜ 
+    ◽
+    ◽
+⚜ 
+    ◽
+    ◽
+⚜ 
+    ◽
+    ◽
+⚜ 
+    ◽
+    ◽
