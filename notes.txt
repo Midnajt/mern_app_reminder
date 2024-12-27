@@ -22,9 +22,14 @@ favicon.io
     ◽ dzięki niemu jest potrzebnych mniej global state'ów
     ◽ strony są niezależnymi bytami
     
-⚜ 
+⚜ STYLED COMPONENTS
+    ◽ npm install styled-components
+    ◽ CSS pisany w JS
+    ◽ komponenety mogą mieć takie same nazwy klasy, przy kompilacjiklasy zamieniane są na hashe
+    ◽ umożliwiają wykorzystywanie logiki z js
     ◽
     ◽
+
 ⚜ 
     ◽
     ◽
