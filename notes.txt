@@ -35,10 +35,11 @@ templatka: https://github.com/john-smilga/mern-jobify-v2
     ◽ przy importach koniecznie trzeba dodawać rozszerzenie pliku (przeważnie .js)
     
     ◽ express: Minimalistyczny framework do budowy aplikacji webowych i API w Node.js.
-    ◽ nodemon: ❤ Narzędzie do automatycznego restartowania aplikacji Node.js po wykryciu zmian w kodzie.
-        - node 18.11 umożliwia wykorzytywanie funkcji watch, która zapewnia taki sam efekt, uruchom projekt komendą 'node --watch server.js'
+    ◽ *nodemon: Narzędzie do automatycznego restartowania aplikacji Node.js po wykryciu zmian w kodzie.
+        - *node 18.11 umożliwia wykorzytywanie funkcji watch, która zapewnia taki sam efekt, uruchom projekt komendą 'node --watch server.js'
     ◽ morgan: Middleware dla Express.js do logowania zapytań HTTP.
     ◽ dotenv: Biblioteka do ładowania zmiennych środowiskowych z pliku .env do process.env.
+    ◽ nanoid: Biblioteka do generowania unikalnych identyfikatorów.
     ◽ bcryptjs: Biblioteka do hashowania haseł w JavaScript, zapewniająca bezpieczne przechowywanie haseł użytkowników.
     ◽ concurrently: Narzędzie umożliwiające równoczesne uruchamianie wielu poleceń w jednym terminalu.
     ◽ cookie-parser: Middleware dla Express.js do obsługi ciasteczek (cookies) w aplikacjach Node.js.
@@ -49,7 +50,6 @@ templatka: https://github.com/john-smilga/mern-jobify-v2
     ◽ jsonwebtoken: Biblioteka do generowania i weryfikacji tokenów JWT (JSON Web Tokens).
     ◽ mongoose: Biblioteka do modelowania danych MongoDB w Node.js.
     ◽ multer: Middleware dla Express.js do obsługi przesyłania plików.
-    ◽ nanoid: Biblioteka do generowania unikalnych identyfikatorów.
     ◽ cloudinary: Usługa do zarządzania i przetwarzania zasobów multimedialnych w chmurze.
     ◽ datauri: Narzędzie do konwersji plików na URI danych.
     ◽ helmet: Middleware dla Express.js zwiększający bezpieczeństwo aplikacji poprzez ustawienie odpowiednich nagłówków HTTP.
@@ -61,8 +61,17 @@ templatka: https://github.com/john-smilga/mern-jobify-v2
         fetch('https://www.course-api.com/react-useReducer-cart-project')
         .then((res) => res.json())
         .then((data) => console.log(data));
+    ◽ 👌 CRUD to nazwa określająca zestaw fundamentalnych operacji wykorzystywanych do zarządzania danych przez aplikację:
+        - Create (Tworzenie) - Dodawanie nowych rekordów do bazy danych.
+        - Read (Odczyt) - Pobieranie danych z bazy danych.
+        - Update (Aktualizacja) - Modyfikowanie istniejących rekordów w bazie danych.
+        - Delete (Usuwanie) - Usuwanie rekordów z bazy danych.
+    ◽
+    ◽
 
-⚜ 
+⚜ HTTP STATUS
+    ◽ 201 "Created" - żądanie zakończyło sie sukcesem w wyniku czego został utworzony nowy zasób.
+    ◽ 404 "Not Found" - wskazany zasób nie został znaleziony na serwerze.
     ◽
     ◽
 ⚜ 
