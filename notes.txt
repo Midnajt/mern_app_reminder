@@ -72,7 +72,7 @@ templatka: https://github.com/john-smilga/mern-jobify-v2
 ⚜ HTTP STATUS
     ◽ 201 "Created" - żądanie zakończyło sie sukcesem w wyniku czego został utworzony nowy zasób.
     ◽ 404 "Not Found" - wskazany zasób nie został znaleziony na serwerze.
-    ◽
+    ◽ 500 "Internal Server Error" - używany przez serwer do wskazania, że wystąpił nieoczekiwany błąd, uniemożliwiający wykonanie żądania serwerowi. Serwer napotkał sytuację, której nie wie, jak użyć.
     ◽
 ⚜ 
     ◽
