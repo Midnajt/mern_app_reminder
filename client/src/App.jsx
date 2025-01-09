@@ -1,6 +1,14 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { HomeLayout, Landing, Register, Login, DashboardLayout, Error, AddJob, Stats, AllJobs, Profile, Admin } from './pages';
 
+export const checkDefaultTheme = () => {
+  const isDarkTheme = localStorage.getItem('darkTheme') === 'true';
+  document.body.classList.toggle('dark-theme', isDarkTheme);
+  return isDarkTheme;
+};
+
+checkDefaultTheme();
+
 const router = createBrowserRouter([
   {
     path: '/',
