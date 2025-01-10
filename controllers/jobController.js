@@ -10,6 +10,7 @@ export const getAllJobs = async (req, res) => {
 };
 
 export const createJob = async (req, res) => {
+  console.log(req);
   const { company, position } = req.body;
   if (!company || !position) {
     return res.status(400).json({ msg: 'Please provide company and position' });

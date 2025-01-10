@@ -40,6 +40,7 @@ templatka: https://github.com/john-smilga/mern-jobify-v2
     ◽ morgan: Middleware dla Express.js do logowania zapytań HTTP.
     ◽ dotenv: Biblioteka do ładowania zmiennych środowiskowych z pliku .env do process.env.
     ◽ nanoid: Biblioteka do generowania unikalnych identyfikatorów.
+    ◽ mongoose: Biblioteka do modelowania danych MongoDB w Node.js. Baza danych jest na https://cloud.mongodb.com/
     ◽ bcryptjs: Biblioteka do hashowania haseł w JavaScript, zapewniająca bezpieczne przechowywanie haseł użytkowników.
     ◽ concurrently: Narzędzie umożliwiające równoczesne uruchamianie wielu poleceń w jednym terminalu.
     ◽ cookie-parser: Middleware dla Express.js do obsługi ciasteczek (cookies) w aplikacjach Node.js.
@@ -48,7 +49,6 @@ templatka: https://github.com/john-smilga/mern-jobify-v2
     ◽ express-validator: Middleware dla Express.js do walidacji danych wejściowych.
     ◽ http-status-codes: Biblioteka zawierająca stałe dla kodów statusu HTTP.
     ◽ jsonwebtoken: Biblioteka do generowania i weryfikacji tokenów JWT (JSON Web Tokens).
-    ◽ mongoose: Biblioteka do modelowania danych MongoDB w Node.js.
     ◽ multer: Middleware dla Express.js do obsługi przesyłania plików.
     ◽ cloudinary: Usługa do zarządzania i przetwarzania zasobów multimedialnych w chmurze.
     ◽ datauri: Narzędzie do konwersji plików na URI danych.
