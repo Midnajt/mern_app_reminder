@@ -41,13 +41,15 @@ templatka: https://github.com/john-smilga/mern-jobify-v2
     ◽ dotenv: Biblioteka do ładowania zmiennych środowiskowych z pliku .env do process.env.
     ◽ nanoid: Biblioteka do generowania unikalnych identyfikatorów.
     ◽ mongoose: Biblioteka do modelowania danych MongoDB w Node.js. Baza danych jest na https://cloud.mongodb.com/
+    ◽ express-async-errors: Middleware dla Express.js, który automatycznie obsługuje błędy asynchroniczne.
+    ◽ http-status-codes: Biblioteka zawierająca stałe dla kodów statusu HTTP.
+
     ◽ bcryptjs: Biblioteka do hashowania haseł w JavaScript, zapewniająca bezpieczne przechowywanie haseł użytkowników.
     ◽ concurrently: Narzędzie umożliwiające równoczesne uruchamianie wielu poleceń w jednym terminalu.
     ◽ cookie-parser: Middleware dla Express.js do obsługi ciasteczek (cookies) w aplikacjach Node.js.
     ◽ dayjs: Lekka biblioteka do manipulacji i formatowania dat oraz czasu.
-    ◽ express-async-errors: Middleware dla Express.js, który automatycznie obsługuje błędy asynchroniczne.
+
     ◽ express-validator: Middleware dla Express.js do walidacji danych wejściowych.
-    ◽ http-status-codes: Biblioteka zawierająca stałe dla kodów statusu HTTP.
     ◽ jsonwebtoken: Biblioteka do generowania i weryfikacji tokenów JWT (JSON Web Tokens).
     ◽ multer: Middleware dla Express.js do obsługi przesyłania plików.
     ◽ cloudinary: Usługa do zarządzania i przetwarzania zasobów multimedialnych w chmurze.
@@ -70,7 +72,11 @@ templatka: https://github.com/john-smilga/mern-jobify-v2
     ◽
 
 ⚜ HTTP STATUS
+    ◽ 200 "OK" - sukces
     ◽ 201 "Created" - żądanie zakończyło sie sukcesem w wyniku czego został utworzony nowy zasób.
+    ◽ 400 "Bad request"
+    ◽ 401 "Unauthorized"
+    ◽ 403 "Forbidden"
     ◽ 404 "Not Found" - wskazany zasób nie został znaleziony na serwerze.
     ◽ 500 "Internal Server Error" - używany przez serwer do wskazania, że wystąpił nieoczekiwany błąd, uniemożliwiający wykonanie żądania serwerowi. Serwer napotkał sytuację, której nie wie, jak użyć.
     ◽

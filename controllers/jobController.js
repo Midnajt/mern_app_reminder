@@ -1,61 +1,52 @@
-import { nanoid } from 'nanoid'; // generate unique ids
-
-let jobs = [
-  { id: nanoid(), company: 'apple', position: 'front-end' },
-  { id: nanoid(), company: 'google', position: 'back-end' },
-];
+// expres-async-handler is used to handle async functions in express instead of try/catch in evry function with req.body
+import Job from '../models/JobModel.js';
+import { StatusCodes } from 'http-status-codes';
+import { NotFoundError } from '../errors/customErrors.js';
 
 export const getAllJobs = async (req, res) => {
-  res.status(200).json({ jobs });
+  const jobs = await Job.find({});
+  res.status(StatusCodes.OK).json({ jobs });
 };
 
 export const createJob = async (req, res) => {
-  console.log(req);
-  const { company, position } = req.body;
-  if (!company || !position) {
-    return res.status(400).json({ msg: 'Please provide company and position' });
-  }
-
-  const job = { id: nanoid(10), company, position };
-  jobs.push(job);
-  res.status(201).json({ job });
+  //req.body has company and position so if in jobModel we have them defined than we can use this
+  const job = await Job.create(req.body);
+  res.status(StatusCodes.CREATED).json({ job });
 };
 
 export const getJob = async (req, res) => {
   const { id } = req.params;
-  const job = jobs.find((job) => job.id === id);
+  const job = await Job.findById(id);
+
   if (!job) {
-    return res.status(404).json({ msg: `No job with id ${id}` });
+    throw new NotFoundError(`No job with id ${id}`);
   }
 
-  res.status(200).json({ job });
+  res.status(StatusCodes.OK).json({ job });
 };
 
 export const updateJob = async (req, res) => {
-  const { company, position } = req.body;
-  if (!company || !position) {
-    return res.status(400).json({ msg: 'Please provide company and position' });
-  }
-
   const { id } = req.params;
-  const job = jobs.find((job) => job.id === id);
-  if (!job) {
-    return res.status(404).json({ msg: `No job with id ${id}` });
+
+  const updatedJob = await Job.findByIdAndUpdate(id, req.body, {
+    new: true,
+  });
+
+  if (!updatedJob) {
+    throw new NotFoundError(`No job with id ${id}`);
   }
 
-  job.company = company;
-  job.position = position;
-
-  res.status(200).json({ job });
+  res.status(StatusCodes.OK).json({ msg: 'job modified', job: updatedJob });
 };
 
 export const deleteJob = async (req, res) => {
   const { id } = req.params;
-  const job = jobs.find((job) => job.id === id);
-  if (!job) {
-    return res.status(404).json({ msg: `No job with id ${id}` });
+
+  const removedJob = await Job.findByIdAndDelete(id);
+
+  if (!removedJob) {
+    throw new NotFoundError(`No job with id ${id}`);
   }
 
-  jobs = jobs.filter((job) => job.id !== id);
-  res.status(200).json({ msg: 'Job deleted successfully' });
+  res.status(StatusCodes.OK).json({ msg: 'Job deleted successfully' });
 };
