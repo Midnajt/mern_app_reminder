@@ -10,6 +10,11 @@ import mongoose from 'mongoose';
 if (process.env.NODE_DEV === 'development') {
   app.use(morgan('dev')); // middleware to log requests in console, must be before routes
 }
+
+app.get('/', (req, res) => {
+  res.send('⚜ Hello there ⚜');
+});
+
 //routers
 import jobRouter from './routes/jobRouter.js';
 app.use('/api/v1/jobs', jobRouter);

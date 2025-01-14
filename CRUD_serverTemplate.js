@@ -103,3 +103,27 @@ const port = process.env.PORT || 5100;
 app.listen(port, () => {
   console.log(`👌 Server is listening on port ${port}`);
 });
+
+// VALIDATION EXAMPLE
+// import { body, validationResult } from 'express-validator';
+// app.post(
+//   '/api/v1/test',
+//   // in array we can put as many validators as we want
+//   [body('name').notEmpty().withMessage('Name is required').isLength({ min: 50 }).withMessage('Name must be at least 50 characters long')],
+//   //after validators we put middleware that will handle errors
+//   (req, res, next) => {
+//     // validationResult is a function that checks if there are any errors in the request
+//     const errors = validationResult(req);
+//     // if there are errors we return them as an array
+//     if (!errors.isEmpty()) {
+//       // we map through errors array and return only the message
+//       const errorMessages = errors.array().map((error) => error.msg);
+//       return res.status(400).json({ errors: errorMessages });
+//     }
+//     next();
+//   },
+//   (req, res) => {
+//     const { name } = req.body;
+//     res.json({ message: `Hello ${name}` });
+//   }
+// );
