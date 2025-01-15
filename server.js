@@ -17,9 +17,12 @@ app.get('/', (req, res) => {
 
 //routers
 import jobRouter from './routes/jobRouter.js';
+import authRouter from './routes/authRouter.js';
 app.use('/api/v1/jobs', jobRouter);
+app.use('/api/v1/auth', authRouter);
 
 import errorHandlerMiddleware from './middleware/errorHandlerMiddleware.js';
+import User from './models/UserModel.js';
 
 app.use('*', (req, res) => {
   res.status(404).json({ msg: 'Route not found (app.use("*"))' });
@@ -37,6 +40,18 @@ try {
   await mongoose.connect(process.env.MONGO_URL);
   app.listen(port, () => {
     console.log(`👌 Server is listening on port ${port}. ⛅Mongoose connected`);
+
+    const deleteAllUsers = async (req, res) => {
+      try {
+        await User.deleteMany({});
+        // res.status(200).json({ msg: 'All users have been deleted' });
+        console.log('deleted');
+      } catch (error) {
+        console.log('not deleted');
+      }
+    };
+
+    // deleteAllUsers();
   });
 } catch (error) {
   console.log(`❗ Fat Error: ${error.message}`);

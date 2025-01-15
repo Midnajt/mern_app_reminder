@@ -43,8 +43,8 @@ templatka: https://github.com/john-smilga/mern-jobify-v2
     ◽ mongoose: Biblioteka do modelowania danych MongoDB w Node.js. Baza danych jest na https://cloud.mongodb.com/
     ◽ express-async-errors: Middleware dla Express.js, który automatycznie obsługuje błędy asynchroniczne.
     ◽ http-status-codes: Biblioteka zawierająca stałe dla kodów statusu HTTP.
-
     ◽ bcryptjs: Biblioteka do hashowania haseł w JavaScript, zapewniająca bezpieczne przechowywanie haseł użytkowników.
+
     ◽ concurrently: Narzędzie umożliwiające równoczesne uruchamianie wielu poleceń w jednym terminalu.
     ◽ cookie-parser: Middleware dla Express.js do obsługi ciasteczek (cookies) w aplikacjach Node.js.
     ◽ dayjs: Lekka biblioteka do manipulacji i formatowania dat oraz czasu.
