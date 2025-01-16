@@ -41,15 +41,15 @@ try {
   app.listen(port, () => {
     console.log(`👌 Server is listening on port ${port}. ⛅Mongoose connected`);
 
-    const deleteAllUsers = async (req, res) => {
-      try {
-        await User.deleteMany({});
-        // res.status(200).json({ msg: 'All users have been deleted' });
-        console.log('deleted');
-      } catch (error) {
-        console.log('not deleted');
-      }
-    };
+    // const deleteAllUsers = async (req, res) => {
+    //   try {
+    //     await User.deleteMany({});
+    //     // res.status(200).json({ msg: 'All users have been deleted' });
+    //     console.log('deleted');
+    //   } catch (error) {
+    //     console.log('not deleted');
+    //   }
+    // };
 
     // deleteAllUsers();
   });

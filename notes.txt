@@ -44,13 +44,13 @@ templatka: https://github.com/john-smilga/mern-jobify-v2
     ◽ express-async-errors: Middleware dla Express.js, który automatycznie obsługuje błędy asynchroniczne.
     ◽ http-status-codes: Biblioteka zawierająca stałe dla kodów statusu HTTP.
     ◽ bcryptjs: Biblioteka do hashowania haseł w JavaScript, zapewniająca bezpieczne przechowywanie haseł użytkowników.
+    ◽ jsonwebtoken: Biblioteka do generowania i weryfikacji tokenów JWT (JSON Web Tokens).
 
     ◽ concurrently: Narzędzie umożliwiające równoczesne uruchamianie wielu poleceń w jednym terminalu.
     ◽ cookie-parser: Middleware dla Express.js do obsługi ciasteczek (cookies) w aplikacjach Node.js.
     ◽ dayjs: Lekka biblioteka do manipulacji i formatowania dat oraz czasu.
 
     ◽ express-validator: Middleware dla Express.js do walidacji danych wejściowych.
-    ◽ jsonwebtoken: Biblioteka do generowania i weryfikacji tokenów JWT (JSON Web Tokens).
     ◽ multer: Middleware dla Express.js do obsługi przesyłania plików.
     ◽ cloudinary: Usługa do zarządzania i przetwarzania zasobów multimedialnych w chmurze.
     ◽ datauri: Narzędzie do konwersji plików na URI danych.
@@ -81,7 +81,7 @@ templatka: https://github.com/john-smilga/mern-jobify-v2
     ◽ 500 "Internal Server Error" - używany przez serwer do wskazania, że wystąpił nieoczekiwany błąd, uniemożliwiający wykonanie żądania serwerowi. Serwer napotkał sytuację, której nie wie, jak użyć.
     ◽
 ⚜ 
-    ◽
+    ◽ token przetrzymywany w HTTP Cookie gwarantuje mniejszą ilość kodu do napisania. Jest przesyłany przy każdym request'ście
     ◽
 ⚜ 
     ◽
