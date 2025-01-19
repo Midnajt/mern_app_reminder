@@ -15,11 +15,7 @@ const DashboardLayout = () => {
   const toggleDarkTheme = () => {
     const newDarkTheme = !isDarkTheme;
     setIsDarkTheme(newDarkTheme);
-<<<<<<< HEAD
-    document.body.classList.toggle('dark-theme', isDarkTheme);
-=======
     document.body.classList.toggle('dark-theme', newDarkTheme);
->>>>>>> origin/main
     localStorage.setItem('darkTheme', newDarkTheme);
   };
 
@@ -32,7 +28,16 @@ const DashboardLayout = () => {
   };
 
   return (
-    <DashboardContext.Provider value={{ user, showSidebar, isDarkTheme, toggleDarkTheme, toggleSidebar, logoutUser }}>
+    <DashboardContext.Provider
+      value={{
+        user,
+        showSidebar,
+        isDarkTheme,
+        toggleDarkTheme,
+        toggleSidebar,
+        logoutUser,
+      }}
+    >
       <Wrapper>
         <main className="dashboard">
           <SmallSidebar />
