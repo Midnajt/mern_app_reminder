@@ -15,7 +15,11 @@ const DashboardLayout = () => {
   const toggleDarkTheme = () => {
     const newDarkTheme = !isDarkTheme;
     setIsDarkTheme(newDarkTheme);
+<<<<<<< HEAD
     document.body.classList.toggle('dark-theme', isDarkTheme);
+=======
+    document.body.classList.toggle('dark-theme', newDarkTheme);
+>>>>>>> origin/main
     localStorage.setItem('darkTheme', newDarkTheme);
   };
 

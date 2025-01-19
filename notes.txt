@@ -2,19 +2,19 @@ templatka: https://github.com/john-smilga/mern-jobify-v2
 🛠🛠🛠🛠🛠🛠🛠🛠🛠🛠🛠 MERN APP reminder 🛠🛠🛠🛠🛠🛠🛠🛠🛠🛠🛠
 
 ⚜ SETUP
-npm create vite@latest client -- --template react 
+    npm create vite@latest client -- --template react 
 
-favicon.io
+    favicon.io
 
-◽tanstack/react-query - Zarządza stanem danych asynchronicznych i ich buforowaniem w aplikacjach React.
-◽tanstack/react-query-devtools - Narzędzie deweloperskie do debugowania i monitorowania stanu oraz zapytań zarządzanych przez React Query.
-◽axios - Biblioteka do wykonywania zapytań HTTP z obietnicami w JavaScript.
-◽dayjs - Lekka biblioteka do manipulacji i formatowania dat oraz czasu.
-◽react-icons - Zbiór ikon dostępnych jako komponenty React z różnych bibliotek.
-◽react-router-dom - Biblioteka do obsługi routingu w aplikacjach React z możliwością zarządzania nawigacją między stronami.
-◽react-toastify - Umożliwia łatwe wyświetlanie powiadomień toast w aplikacjach React.
-◽recharts - Biblioteka do tworzenia wykresów i wizualizacji danych w React.
-◽styled-components - Umożliwia tworzenie komponentów React z wbudowanym stylem CSS w sposób deklaratywny.
+    ◽tanstack/react-query - Zarządza stanem danych asynchronicznych i ich buforowaniem w aplikacjach React.
+    ◽tanstack/react-query-devtools - Narzędzie deweloperskie do debugowania i monitorowania stanu oraz zapytań zarządzanych przez React Query.
+    ◽axios - Biblioteka do wykonywania zapytań HTTP z obietnicami w JavaScript.
+    ◽dayjs - Lekka biblioteka do manipulacji i formatowania dat oraz czasu.
+    ◽react-icons - Zbiór ikon dostępnych jako komponenty React z różnych bibliotek.
+    ◽react-router-dom - Biblioteka do obsługi routingu w aplikacjach React z możliwością zarządzania nawigacją między stronami.
+    ◽react-toastify - Umożliwia łatwe wyświetlanie powiadomień toast w aplikacjach React.
+    ◽recharts - Biblioteka do tworzenia wykresów i wizualizacji danych w React.
+    ◽styled-components - Umożliwia tworzenie komponentów React z wbudowanym stylem CSS w sposób deklaratywny.
 
 ⚜ REACT ROUTER
     ◽ npm i react-router-dom
@@ -30,14 +30,58 @@ favicon.io
     ◽
     ◽
 
+⚜ SERVER
+    ◽ aby korzystać z ES modules, należy dodać '"type": "module",' w package.json
+    ◽ przy importach koniecznie trzeba dodawać rozszerzenie pliku (przeważnie .js)
+    
+    ◽ express: Minimalistyczny framework do budowy aplikacji webowych i API w Node.js.
+    ◽ *nodemon: Narzędzie do automatycznego restartowania aplikacji Node.js po wykryciu zmian w kodzie.
+        - *node 18.11 umożliwia wykorzytywanie funkcji watch, która zapewnia taki sam efekt, uruchom projekt komendą 'node --watch server.js'
+    ◽ morgan: Middleware dla Express.js do logowania zapytań HTTP.
+    ◽ dotenv: Biblioteka do ładowania zmiennych środowiskowych z pliku .env do process.env.
+    ◽ nanoid: Biblioteka do generowania unikalnych identyfikatorów.
+    ◽ mongoose: Biblioteka do modelowania danych MongoDB w Node.js. Baza danych jest na https://cloud.mongodb.com/
+    ◽ express-async-errors: Middleware dla Express.js, który automatycznie obsługuje błędy asynchroniczne.
+    ◽ http-status-codes: Biblioteka zawierająca stałe dla kodów statusu HTTP.
+    ◽ bcryptjs: Biblioteka do hashowania haseł w JavaScript, zapewniająca bezpieczne przechowywanie haseł użytkowników.
+    ◽ jsonwebtoken: Biblioteka do generowania i weryfikacji tokenów JWT (JSON Web Tokens).
+
+    ◽ concurrently: Narzędzie umożliwiające równoczesne uruchamianie wielu poleceń w jednym terminalu.
+    ◽ cookie-parser: Middleware dla Express.js do obsługi ciasteczek (cookies) w aplikacjach Node.js.
+    ◽ dayjs: Lekka biblioteka do manipulacji i formatowania dat oraz czasu.
+
+    ◽ express-validator: Middleware dla Express.js do walidacji danych wejściowych.
+    ◽ multer: Middleware dla Express.js do obsługi przesyłania plików.
+    ◽ cloudinary: Usługa do zarządzania i przetwarzania zasobów multimedialnych w chmurze.
+    ◽ datauri: Narzędzie do konwersji plików na URI danych.
+    ◽ helmet: Middleware dla Express.js zwiększający bezpieczeństwo aplikacji poprzez ustawienie odpowiednich nagłówków HTTP.
+    ◽ express-rate-limit: Middleware dla Express.js do ograniczania liczby zapytań od jednego klienta.
+    ◽ express-mongo-sanitize: Middleware dla Express.js do ochrony przed atakami NoSQL injection poprzez sanityzację danych wejściowych.
+
+    ◽ app.use(express.json()); -> dodaje middleware który parsuje na json przychodzące żądania
+    ◽ w node można używać fetch API, przykład:
+        fetch('https://www.course-api.com/react-useReducer-cart-project')
+        .then((res) => res.json())
+        .then((data) => console.log(data));
+    ◽ 👌 CRUD to nazwa określająca zestaw fundamentalnych operacji wykorzystywanych do zarządzania danych przez aplikację:
+        - Create (Tworzenie) - Dodawanie nowych rekordów do bazy danych.
+        - Read (Odczyt) - Pobieranie danych z bazy danych.
+        - Update (Aktualizacja) - Modyfikowanie istniejących rekordów w bazie danych.
+        - Delete (Usuwanie) - Usuwanie rekordów z bazy danych.
+    ◽
+    ◽
+
+⚜ HTTP STATUS
+    ◽ 200 "OK" - sukces
+    ◽ 201 "Created" - żądanie zakończyło sie sukcesem w wyniku czego został utworzony nowy zasób.
+    ◽ 400 "Bad request"
+    ◽ 401 "Unauthorized"
+    ◽ 403 "Forbidden"
+    ◽ 404 "Not Found" - wskazany zasób nie został znaleziony na serwerze.
+    ◽ 500 "Internal Server Error" - używany przez serwer do wskazania, że wystąpił nieoczekiwany błąd, uniemożliwiający wykonanie żądania serwerowi. Serwer napotkał sytuację, której nie wie, jak użyć.
+    ◽
 ⚜ 
-    ◽
-    ◽
-⚜ 
-    ◽
-    ◽
-⚜ 
-    ◽
+    ◽ token przetrzymywany w HTTP Cookie gwarantuje mniejszą ilość kodu do napisania. Jest przesyłany przy każdym request'ście
     ◽
 ⚜ 
     ◽
