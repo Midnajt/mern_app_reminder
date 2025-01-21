@@ -116,3 +116,23 @@ export const validateRegisterInput = withValidationErrors([
   body('lastName').notEmpty().withMessage('Last name is required '),
   body('location').notEmpty().withMessage('Locations required '),
 ]);
+
+export const validateUpdateUserInput = withValidationErrors([
+  body('name').notEmpty().withMessage('Name is required '),
+  body('email')
+    .notEmpty()
+    .withMessage('Email is required ')
+    .isEmail()
+    .withMessage('invalid email format')
+    .custom(async (email) => {
+      console.log('tutaj');
+      const user = await User.findOne({ email });
+
+      if (user && user._id.toString() !== user.userId) {
+        throw new BadRequestError('Email already exists');
+      }
+      console.log('tutaj2');
+    }),
+  body('lastName').notEmpty().withMessage('Last name is required '),
+  body('location').notEmpty().withMessage('Locations required '),
+]);

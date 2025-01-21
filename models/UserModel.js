@@ -19,4 +19,11 @@ const UserSchema = new mongoose.Schema({
   },
 });
 
+UserSchema.methods.toJSON = function () {
+  // custom function .toJSON() is removing password from returning usr object from backend to frontend
+  let obj = this.toObject();
+  delete obj.password;
+  return obj;
+};
+
 export default mongoose.model('User', UserSchema);
