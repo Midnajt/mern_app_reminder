@@ -45,9 +45,9 @@ templatka: https://github.com/john-smilga/mern-jobify-v2
     ◽ http-status-codes: Biblioteka zawierająca stałe dla kodów statusu HTTP.
     ◽ bcryptjs: Biblioteka do hashowania haseł w JavaScript, zapewniająca bezpieczne przechowywanie haseł użytkowników.
     ◽ jsonwebtoken: Biblioteka do generowania i weryfikacji tokenów JWT (JSON Web Tokens).
+    ◽ cookie-parser: Middleware dla Express.js do obsługi ciasteczek (cookies) w aplikacjach Node.js.
 
     ◽ concurrently: Narzędzie umożliwiające równoczesne uruchamianie wielu poleceń w jednym terminalu.
-    ◽ cookie-parser: Middleware dla Express.js do obsługi ciasteczek (cookies) w aplikacjach Node.js.
     ◽ dayjs: Lekka biblioteka do manipulacji i formatowania dat oraz czasu.
 
     ◽ express-validator: Middleware dla Express.js do walidacji danych wejściowych.

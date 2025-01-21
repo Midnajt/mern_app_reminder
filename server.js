@@ -4,6 +4,8 @@ dotenv.config(); // loading vars from .env to process.env
 import express from 'express';
 const app = express();
 app.use(express.json()); // middleware to parse json data, must be before routes
+import cookieParser from 'cookie-parser';
+app.use(cookieParser());
 import morgan from 'morgan';
 import mongoose from 'mongoose';
 
@@ -18,11 +20,15 @@ app.get('/', (req, res) => {
 //routers
 import jobRouter from './routes/jobRouter.js';
 import authRouter from './routes/authRouter.js';
-app.use('/api/v1/jobs', jobRouter);
+
+//middleware
+import errorHandlerMiddleware from './middleware/errorHandlerMiddleware.js';
+import { authenticateUser } from './middleware/authMiddleware.js';
+
+app.use('/api/v1/jobs', authenticateUser, jobRouter);
 app.use('/api/v1/auth', authRouter);
 
-import errorHandlerMiddleware from './middleware/errorHandlerMiddleware.js';
-import User from './models/UserModel.js';
+// import User from './models/UserModel.js';
 
 app.use('*', (req, res) => {
   res.status(404).json({ msg: 'Route not found (app.use("*"))' });
