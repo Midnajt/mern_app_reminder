@@ -1,6 +1,6 @@
-import 'express-async-errors'; // to handle async errors in express instead of trycatch at controllers
 import * as dotenv from 'dotenv'; // to avoid issues put in on top
 dotenv.config(); // loading vars from .env to process.env
+import 'express-async-errors'; // to handle async errors in express instead of trycatch at controllers
 import express from 'express';
 const app = express();
 app.use(express.json()); // middleware to parse json data, must be before routes
@@ -9,7 +9,7 @@ app.use(cookieParser());
 import morgan from 'morgan';
 import mongoose from 'mongoose';
 
-if (process.env.NODE_DEV === 'development') {
+if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev')); // middleware to log requests in console, must be before routes
 }
 
@@ -30,6 +30,9 @@ app.use('/api/v1/jobs', authenticateUser, jobRouter);
 app.use('/api/v1/users', authenticateUser, userRouter);
 app.use('/api/v1/auth', authRouter);
 
+app.get('/api/v1/test', (req, res) => {
+  res.json({ msg: 'test route' });
+});
 // import User from './models/UserModel.js';
 
 app.use('*', (req, res) => {

@@ -125,13 +125,11 @@ export const validateUpdateUserInput = withValidationErrors([
     .isEmail()
     .withMessage('invalid email format')
     .custom(async (email) => {
-      console.log('tutaj');
       const user = await User.findOne({ email });
 
       if (user && user._id.toString() !== user.userId) {
         throw new BadRequestError('Email already exists');
       }
-      console.log('tutaj2');
     }),
   body('lastName').notEmpty().withMessage('Last name is required '),
   body('location').notEmpty().withMessage('Locations required '),

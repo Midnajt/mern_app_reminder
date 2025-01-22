@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "setup-project": "npm i && cd client && npm i",
-    "frontend": "cd client && npm run dev",
-    "dev": "node --watch server.js",
-    "nodemon-version": "nodemon server.js"
+    "server": "node --watch server.js",
+    "client": "cd client && npm run dev",
+    "dev": "concurrently --kill-others-on-fail \" npm run server\" \" npm run client\""
   },
   "keywords": [],
   "author": "",

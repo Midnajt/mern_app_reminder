@@ -82,7 +82,42 @@ templatka: https://github.com/john-smilga/mern-jobify-v2
     ◽
 ⚜ 
     ◽ token przetrzymywany w HTTP Cookie gwarantuje mniejszą ilość kodu do napisania. Jest przesyłany przy każdym request'ście
-    ◽
+
+💥    ◽ przykładowy route z serwera wysyłający wiadomość (serwer pracuje na port 5100 - http://localhost:5100/)
+        app.get('/api/v1/test', (req, res) => {
+            res.json({ msg: 'test route' });
+        });
+
+    odebranie danych po stronie clienta
+    fetch('/api/v1/test')
+        .then((res) => res.json())
+        .then((data) => console.log(data));
+
+    pod warunkiem że ma ustawione proxy w vite.config.js
+
+        import { defineConfig } from 'vite';
+        import react from '@vitejs/plugin-react';
+
+        // https://vite.dev/config/
+        export default defineConfig({
+        plugins: [react()],
+        server: {
+            proxy: {
+            '/api': {
+                target: 'http://localhost:5100/api',
+                changeOrigin: true,
+                rewrite: (path) => path.replace(/^\/api/, ''),
+                },
+            },
+        },
+        });
+
+        przykład wykorzystujący bibliotekę axios
+        import axios from 'axios';
+
+        const response = await axios.get('/api/v1/test');
+        console.log(response);
+
 ⚜ 
     ◽
     ◽
