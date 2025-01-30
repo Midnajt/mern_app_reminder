@@ -119,7 +119,15 @@ templatka: https://github.com/john-smilga/mern-jobify-v2
         console.log(response);
 
 ⚜ 
-    ◽
+    ◽ action musi coś zwracać, minimum null
+        {
+        path: 'register',
+        element: <Register />,
+        action: () => {
+          console.log('action! 🥂🥂🥂');
+          return null;
+            },
+        }
     ◽
 ⚜ 
     ◽
